@@ -56,7 +56,6 @@
         <li class="nav-item">
           <%= link_to filter.to_params(state: name), class: "nav-link #{"active" if params[:state] == name}" do %>
             <%= t(name, scope: 'good_job.status', count: count) %>
-            <span class="badge bg-primary rounded-pill <%= "bg-secondary" if count == 0 %>"><%= number_with_delimiter(count, t('good_job.number.format')) %></span>
           <% end %>
         </li>
       <% end %>

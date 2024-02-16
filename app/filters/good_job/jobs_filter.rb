@@ -6,12 +6,12 @@ module GoodJob
       @_states ||= begin
         query = filtered_query(params.except(:state))
         {
-          'scheduled' =>  query.scheduled.count,
-          'retried' => query.retried.count,
-          'queued' => query.queued.count,
-          'running' => query.running.count,
-          'succeeded' => query.succeeded.count,
-          'discarded' => query.discarded.count,
+          'scheduled' => 0,
+          'retried' => 0,
+          'queued' => 0,
+          'running' => 0,
+          'succeeded' => 0,
+          'discarded' => 0,
         }
       end
     end
